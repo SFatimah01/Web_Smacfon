@@ -1,0 +1,75 @@
+{% block content %}
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <style>
+            body {
+            background-image: url(https://articlearn.id/media/backgrounds/test2.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100%;
+            font-family: "Palatino Linotype", "Book Antiqua", "Century Gothic";
+            }
+        </style>
+        <div class="container-fluid">
+            <div class="row justify-content-start">
+                <div class="col-1">
+                    <img src="https://smkbtb-jwa.sch.id/humasinduka/wp-content/uploads/2020/08/PPTIK-ITB-logo.jpg" width="55" height="50" alt="PPTIK ITB">
+                    <p>PPTIK ITB</p>
+                </div>
+                <div class="col-1">
+                    <img src="https://www.smkn1-cmi.sch.id/wp-content/uploads/2017/05/logo-e1494606597209.png" width="50" height="50" alt="SMKN 1 CIMAHI">
+                    <p>SMKN1 CIMAHI</p>
+                </div>
+                <div class="col-1">
+                    <img src="https://pbs.twimg.com/profile_images/528709986252124160/UikObq5H_400x400.jpeg" width="50" height="50" alt="TEDK SMKN1 Cimahi">
+                    <p>TEDK'45</p>
+                </div>
+            </div>
+        </div>
+    </head>
+        <body>
+            <div class="column is-5 is-offset-5">
+                <h3 class="title">Sign Up</h3>
+                <div class="position-absolute top-50 start-50 translate-middle">
+                    <form method="POST" action="/signup">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Alamat Email</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">Kami tidak akan pernah membagikan email Anda kepada orang lain.</small>
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputUsername1">Username</label>
+                            <input type="email" class="form-control" id="exampleInputUsername1" placeholder="Enter Username">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                          </div>
+                          <div id="passwordHelpBlock" class="form-text">
+                            Kata sandi Anda harus terdiri dari 8-20 karakter, berisi huruf dan angka, dan tidak boleh mengandung spasi, karakter khusus, atau emoji.
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputPassword1">Konfirmasi Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" aria-describedby="passwordHelp" placeholder="Confirm Password">
+                            <small id="passwordHelp" class="form-text text-muted">Tulis ulang password</small>
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputUsername1">Asal Instansi</label>
+                            <input type="email" class="form-control" id="exampleInputUsername1" placeholder="Asal Instansi">
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputUsername1">Kode Admin</label>
+                            <input type="email" class="form-control" id="exampleInputCode1" placeholder="KodeAdmin">
+                          </div>
+                          <button type="submit" class="btn btn-primary">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </body>
+    </head>
+</html>
+{% endblock %}

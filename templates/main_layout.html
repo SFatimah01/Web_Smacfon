@@ -1,0 +1,51 @@
+<html>
+    <head>
+        {% block head %}
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <style>
+            body {
+            background-image: url(https://articlearn.id/media/backgrounds/test2.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100%;
+            font-family: "Palatino Linotype", "Book Antiqua", "Century Gothic";
+            }
+        </style>
+        <div class="container-fluid">
+            <div class="row justify-content-start">
+                <div class="col-1">
+                    <img src="https://smkbtb-jwa.sch.id/humasinduka/wp-content/uploads/2020/08/PPTIK-ITB-logo.jpg" width="55" height="50" alt="PPTIK ITB">
+                    <p>PPTIK ITB</p>
+                </div>
+                <div class="col-1">
+                    <img src="https://www.smkn1-cmi.sch.id/wp-content/uploads/2017/05/logo-e1494606597209.png" width="50" height="50" alt="SMKN 1 CIMAHI">
+                    <p>SMKN1 CIMAHI</p>
+                </div>
+                <div class="col-1">
+                    <img src="https://pbs.twimg.com/profile_images/528709986252124160/UikObq5H_400x400.jpeg" width="50" height="50" alt="TEDK SMKN1 Cimahi">
+                    <p>TEDK'45</p>
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+    </head>
+    <body>
+        {% block panel %}
+        <p class="fs-1">SELAMAT DATANG</p>
+        <div class="container">
+            <div class="header">
+                <nav>
+                    <ul class="nav nav-pills pull-right">
+                        <li role="presentation" class="active"><a href="/">Login</a>
+                        </li>
+                        <li role="presentation"><a href="/signup">Sign Up</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div> 
+        {% endblock %}   
+    </body>
+</html>

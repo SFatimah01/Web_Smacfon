@@ -1,32 +1,60 @@
+{% block content %}
 <!DOCTYPE html>
 <html>
   <head>
     <title>Web Smacfone</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <style>
+        body {
+        background-image: url(https://articlearn.id/media/backgrounds/test2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        height: 100%;
+        font-family: "Palatino Linotype", "Book Antiqua", "Century Gothic";
+        }
+    </style>
+    <div class="container-fluid">
+        <div class="row justify-content-start">
+            <div class="col-1">
+                <img src="https://smkbtb-jwa.sch.id/humasinduka/wp-content/uploads/2020/08/PPTIK-ITB-logo.jpg" width="55" height="50" alt="PPTIK ITB">
+                <p>PPTIK ITB</p>
+            </div>
+            <div class="col-1">
+                <img src="https://www.smkn1-cmi.sch.id/wp-content/uploads/2017/05/logo-e1494606597209.png" width="50" height="50" alt="SMKN 1 CIMAHI">
+                <p>SMKN1 CIMAHI</p>
+            </div>
+            <div class="col-1">
+                <img src="https://pbs.twimg.com/profile_images/528709986252124160/UikObq5H_400x400.jpeg" width="50" height="50" alt="TEDK SMKN1 Cimahi">
+                <p>TEDK'45</p>
+            </div>
+        </div>
+    </div>
   </head>
   <body>
-    <div class="position-relative top-50 start-50 translate-middle-y"></div>
-    <div class="container overflow-hidden">
+    <div class="container">
       <div class="row gx-5">
         <div class="col">
-            <h1>SMACFON </h1>
-            <h2>Smart Camera For Absen</h2>
-            <p>Sebuah perangkat yang dapat mendeteksi suatu foto sehingga dapat memperoleh identitas orang tersebut. Memiliki fungsi utama untuk absen selfie. Sangat berguna digunakan di sekolah atau pun kantor karena dapat meminimalisir kecurangan seperti titip absen dsb.</p>
+            <h1 span class="position-relative top-50 bottom-0">SMACFON </h1>
+            <h2 span class="position-relative top-50 bottom-0">Smart Camera For Absen</h2>
+            <p span class="position-relative top-50 bottom-0" >Sebuah perangkat yang dapat mendeteksi suatu foto sehingga dapat memperoleh identitas orang tersebut. Memiliki fungsi utama untuk absen selfie. Sangat berguna digunakan di sekolah atau pun kantor karena dapat meminimalisir kecurangan seperti titip absen dsb.</p>
         </div>
         <div class="col">
-          <form action="/" method="POST">
+          <form action="/" method="POST" span class="position-relative top-50 bottom-0">
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Email address</label>
-              <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Ketikkan E-Mail Anda Disini" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Password</label>
-              <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+              <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Ketikkan Password Anda Disini" aria-describedby="passwordHelpBlock">
             </div>
             <div class="mb-3 form-check">
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
-              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              <label class="form-check-label" for="exampleCheck1">Ingat Saya</label>
+              <a href="/signup" class="link-secondary">Belum Daftar?</a>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
@@ -34,4 +62,8 @@
       </div>
     </div> 
   </body>
+  <footer>
+    <p class="fixed-bottom">Copyright @2021</p>
+  </footer>
 </html>
+{% endblock %}
