@@ -1,8 +1,16 @@
 import os
 from flask import Flask, render_template, url_for, request
-from werkzeug.utils import redirect
+from werkzeug.utils import redirect, secure_filename
+
+UPLOAD_FOLDER = './static/uploads/'
+ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 
 application = Flask(__name__)
+application.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+def allowed_file(filename):  
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 @application.route('/',methods=['GET','POST'])
 def index():
@@ -19,9 +27,25 @@ def index():
 def gagal():
     return render_template("home.html")
 
-@application.route('/sukses')
+@application.route('/sukses', methods=['GET', 'POST'])
 def sukses():
-    return render_template("sukses.html")
+    if request.method == 'POST':        
+        if 'file' not in request.files:
+            return render_template('sukses.html')
+        file = request.files['file']
+        
+        if file.filename == '':
+            return render_template('sukses.html')
+
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            file.save(os.path.join(application.config['UPLOAD_FOLDER'], filename))
+            return render_template('result.html',
+                    msg='Sukses Upload, Thankyou!',
+                    img_src=UPLOAD_FOLDER + file.filename)
+    elif request.method == 'GET':
+        return render_template('sukses.html')
+
 
 @application.route('/home')
 def Beranda():

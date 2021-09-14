@@ -1,8 +1,7 @@
-{% block content %}
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Selamat Datang</title>
+  <head>
+    <title>Web Smacfone</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <style>
         body {
@@ -31,12 +30,30 @@
             </div>
         </div>
     </div>
-</head>
-<body>
-    <h2 span class="text-center">Anda Telah Berhasil LOGIN</h2>
-    <form method="POST" enctype=multipart/form-data>
-        <p>Upload<input type='file' name='file' id='abc' class='def'></p>
-        <input type='submit' name='tombol' value='Kirim' />
-  </form>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row gx-5">
+        <div class="col">
+            <h1 span class="position-relative top-50 bottom-0">SMACFON </h1>
+            <h2 span class="position-relative top-50 bottom-0">Smart Camera For Absen</h2>
+            <p span class="position-relative top-50 bottom-0" >Sebuah perangkat yang dapat mendeteksi suatu foto sehingga dapat memperoleh identitas orang tersebut. Memiliki fungsi utama untuk absen selfie. Sangat berguna digunakan di sekolah atau pun kantor karena dapat meminimalisir kecurangan seperti titip absen dsb.</p>
+        </div>
+        <div class="col">
+
+            {% if msg %}
+                <h1>{{ msg }}</h1>
+            {% endif %}
+
+            {% if img_src %}
+                <img src="{{ img_src }}">
+            {% endif %}
+            
+        </div>
+      </div>
+    </div> 
+  </body>
+  <footer>
+    <p class="fixed-bottom">Copyright @2021</p>
+  </footer>
 </html>
-{% endblock %}
